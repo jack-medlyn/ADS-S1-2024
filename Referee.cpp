@@ -1,8 +1,7 @@
 #include <iostream>
 #include "Referee.h"
 
-Referee::Referee(){
-}
+Referee::Referee(){}
 
 Player* Referee::refGame(Player* player1, Player* player2){
     if (player1->makeMove() == player2->makeMove()){
@@ -21,4 +20,3 @@ Player* Referee::refGame(Player* player1, Player* player2){
         return player2;
     }
 }
-    
