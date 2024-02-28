@@ -6,9 +6,10 @@
 using namespace std;
 
 class Player{
-    public:
+    protected:
         char move;
         string name;
+    public:
         char makeMove();
         string getName();
 };
