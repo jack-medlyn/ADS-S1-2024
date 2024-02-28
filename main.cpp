@@ -3,3 +3,6 @@
 #include "Human.h"
 #include "Computer.h"
 
+int main(){
+    
+};

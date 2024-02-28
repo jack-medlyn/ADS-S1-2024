@@ -1,7 +1,6 @@
 #include <iostream>
 #include "Human.h"
-
-using namespace std;
+#include "Player.h"
 
 Human::Human(){
     name = "Human";

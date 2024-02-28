@@ -4,7 +4,7 @@
 #ifndef HUMAN_H
 #define HUMAN_H
 
-class Human : public Player{
+class Human : protected Player{
     public:
     Human(string name);
     Human();
