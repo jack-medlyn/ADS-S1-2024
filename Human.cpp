@@ -19,3 +19,7 @@ Human::Human(string name){
         std::cin >> move;
     }
 }
+
+void Human::setName(string name){
+    this->name = name;
+}
