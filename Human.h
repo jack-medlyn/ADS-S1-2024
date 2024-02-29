@@ -4,10 +4,11 @@
 #ifndef HUMAN_H
 #define HUMAN_H
 
-class Human : protected Player{
+class Human : public Player{
     public:
-    Human(string name);
     Human();
+    Human(string name);
+    void setName(string name);
 };
 
 #endif

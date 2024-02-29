@@ -4,12 +4,18 @@
 
 Human::Human(){
     name = "Human";
-    cout << "Enter move:" << endl;
-    cin >> Player::name;
+    move = 'l';
+    while (move != 'R' && move != 'P' && move != 'S') {
+        std::cout << "Enter move:" << std::endl;
+        std::cin >> move;
+    }
 }
 
 Human::Human(string name){
     this->name = name;
-    cout << "Enter move:" << endl;
-    cin >> Player::move;
+    move = 'l';
+    while (move != 'R' && move != 'P' && move != 'S') {
+        std::cout << "Enter move:" << std::endl;
+        std::cin >> move;
+    }
 }

@@ -4,7 +4,7 @@
 #ifndef COMPUTER_H
 #define COMPUTER_H
 
-class Computer : protected Player{
+class Computer : public Player{
     public:
     Computer();
 };
