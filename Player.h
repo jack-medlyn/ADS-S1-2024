@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Move.h"
+#include "PossibleMoves.h"
 
 #ifndef PLAYER_H
 #define PLAYER_H
@@ -15,6 +17,7 @@ class Player{
     public:
         virtual Move* makeMove();
         string getName();
+        vector<string> getBeats();
 };
 
 #endif

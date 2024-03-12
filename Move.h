@@ -7,49 +7,82 @@ using namespace std;
 #define MOVE_H
 
 class Move{
+    protected:
+        vector<string> beats;
+        string name;
     public:
         virtual ~Move(){};
-        virtual string getName() = 0;
+        string getName(){return name;};
+        vector<string> getBeats(){return beats;}
 };
 
 class Rock : public Move{
-    string getName(){return "Rock";};
-    string beats = "Scissors";
+    public:
+        Rock(){
+            name = "Rock";
+            beats.push_back("Scissors");
+        }
 };
 
 class Paper : public Move{
-    string getName(){return "Paper";};
-    string beats = "Rock";
+    public:
+        Paper(){
+            name = "Paper";
+            beats.push_back("Rock");
+        }
 };
 
 class Scissors : public Move{
-    string getName(){return "Scissors";};
-    string beats = "Paper";
+    public:
+        Scissors(){
+            name = "Scissors";
+            beats.push_back("Paper");
+        }
 };
 
 class Robot : public Move{
-    string getName(){return "Robot";};
-    string beats[2] = {"Zombie", "Ninja"};
+    public:
+        Robot(){
+            name = "Robot";
+            beats.push_back("Zombie");
+            beats.push_back("Ninja");
+        }
 };
 
 class Monkey : public Move{
-    string getName(){return "Monkey";};
-    string beats[2] = {"Ninja", "Robot"};
+    public:
+        Monkey(){
+            name = "Monkey";
+            beats.push_back("Robot");
+            beats.push_back("Ninja");
+        }
 };
 
 class Ninja : public Move{
-    string getName(){return "Ninja";};
-    string beats[2] = {"Pirate", "Zombie"};
+    public:
+        Ninja(){
+            name = "Ninja";
+            beats.push_back("Pirate");
+            beats.push_back("Zombie");
+        }
 };
 
 class Pirate : public Move{
-    string getName(){return "Pirate";};
-    string beats[2] = {"Robot", "Monkey"};
+    public:
+        Pirate(){
+            name = "Pirate";
+            beats.push_back("Robot");
+            beats.push_back("Monkey");
+        }
 };
 
 class Zombie : public Move{
-    string getName(){return "Zombie";};
-    string beats[2] = {"Monkey", "Pirate"};
+    public:
+        Zombie(){
+            name = "Zombie";
+            beats.push_back("Pirate");
+            beats.push_back("Monkey");
+        }
 };
 
 #endif

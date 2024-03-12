@@ -8,3 +8,8 @@ Move* Player::makeMove(){
 string Player::getName(){
     return name;
 }
+
+vector<string> Player::getBeats(){
+    return move->getBeats();
+}
+

@@ -4,5 +4,5 @@
 Referee::Referee(){}
 
 Player* Referee::refGame(Player* player1, Player* player2){
-    
+    for ()
 }
