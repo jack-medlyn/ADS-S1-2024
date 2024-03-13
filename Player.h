@@ -13,7 +13,7 @@ class Player{
     protected:
         Move* move;
         string name;
-        static PossibleMoves moveList;
+        PossibleMoves moveList;
     public:
         virtual Move* makeMove();
         string getName();

@@ -5,7 +5,7 @@
 #define COMPUTER_H
 
 class Computer : public Player{
-    Move* move = new Rock; 
+    Move* move; 
     public:
     Computer();
     Move * makeMove();

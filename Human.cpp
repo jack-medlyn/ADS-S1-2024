@@ -17,8 +17,8 @@ Move* Human::makeMove(){
     string moveName;
     cout << "Enter move: ";
     cin >> moveName;
-    Move* selectedMove = Player::moveList.moveSearch(moveName);
-    while (move = nullptr){
+    Move* selectedMove = moveList.moveSearch(moveName);
+    while (selectedMove == nullptr){
         cout << "Please enter a valid move: ";
         cin >> moveName;
         selectedMove = Player::moveList.moveSearch(moveName);

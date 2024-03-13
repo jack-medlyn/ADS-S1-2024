@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Player.h"
-#include "possibleMoves.h"
+#include "PossibleMoves.h"
 #ifndef HUMAN_H
 #define HUMAN_H
 

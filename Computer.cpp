@@ -4,6 +4,7 @@
 
 Computer::Computer(){
     name = "Computer";
+    move = new Rock;
 }
 
 Move* Computer::makeMove(){
