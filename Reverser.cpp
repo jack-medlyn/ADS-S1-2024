@@ -5,15 +5,14 @@ int Reverser::reverseDigit(int value){
     if (value < 0){
         return -1;
     }
-    int reversal = value;
-    int tens = 1;
-    while (reversal >= 10) {
-        reversal /= 10;
-        tens++;
+    if (value == 0) {
+        return 0;
     }
-    value /=10;
-    value += (reversal * tens);
-    return reverseDigit(value);
+
+    int digit = value % 10;
+    value /= 10;
+
+    return reverseDigit(value) * 10 + digit;
 }
 
 string Reverser::reverseString(string characters){
