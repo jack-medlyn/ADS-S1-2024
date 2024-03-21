@@ -1,14 +1,17 @@
 #include <iostream>
 #include "EfficientTruckloads.h"
 
-int EfficientTruckloads::numTrucks(int numCrates, int loadSize, map<int, int> crates){
+int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
     if (numCrates <= loadSize){
         return 1;
-    } else if (crates.find(numCrates) != crates.end()){
-        return crates[numCrates];
+    } else if (crates.find({numCrates, loadSize}) != crates.end()){
+        return crates[{numCrates, loadSize}];
     } else {
         int leftPile = numCrates / 2;
         int rightPile = numCrates - leftPile;
-        return numTrucks(leftPile, loadSize, crates) + numTrucks(rightPile, loadSize, crates);
+
+        int result = numTrucks(leftPile, loadSize) + numTrucks(rightPile, loadSize);
+        crates[{numCrates, loadSize}] = result;
+        return result;
     }
 }

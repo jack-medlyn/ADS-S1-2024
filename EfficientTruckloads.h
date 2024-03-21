@@ -7,9 +7,11 @@ using namespace std;
 #define EFFICIENTTRUCKLOADS_H
 
 class EfficientTruckloads{
+    private:
+    map<pair<int, int>, int> crates;
     public:
     EfficientTruckloads(){};
-    int numTrucks(int numCrates, int loadSize, map<int, int> crates);
+    int numTrucks(int numCrates, int loadSize);
 };
 
 #endif

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Truckloads.h"
 #include "Reverser.h"
+#include "EfficientTruckloads.h"
 using namespace std;
 
 int getLastDigit(int num) {
@@ -8,9 +9,9 @@ int getLastDigit(int num) {
 }
 
 int main(){
-    Truckloads trucks;
+    EfficientTruckloads trucks;
     Reverser r;
-//    cout << trucks.numTrucks(1024, 5) << endl;
-    cout << r.reverseDigit(3497) << endl;
+    cout << trucks.numTrucks(1024, 5) << endl;
+//    cout << r.reverseDigit(3497) << endl;
     return 0;
 }
